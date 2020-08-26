@@ -173,7 +173,7 @@ function AdminDashboard({ setAdminAuth, index, info }) {
       toast.success("Logout successfully");
 
       setTimeout(() => {
-        window.location.reload(false);
+        window.location.reload(true);
         console.log("Im reloading now")
         // history.push("/adminlogin")
       }, 4000);
