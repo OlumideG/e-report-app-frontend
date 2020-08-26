@@ -19,87 +19,88 @@ const LandingPage = () => {
           Admin Login
         </Link> */}
       </nav>
-      
-      
+
       <div className="land-page-container">
         <div className="land-page-showcase">
           <div className="new-div">
-              <div className="landing-content">
-                <div className="show-title">
-                  <h1>Report an incident online</h1>
-                </div>
-                <div className="show-text">
-                  <p>Tell us about something you've seen or heard</p>
-                </div>
-
-                <div className="show-button">
-                    <button>Report now</button>
-                </div>
+            <div className="landing-content">
+              <div className="show-title">
+                <h1>Report an incident online</h1>
               </div>
+              <div className="show-text">
+                <p>Tel us about something you've seen or heard</p>
+              </div>
+
+              <div className="show-button">
+                <button>Report now</button>
+              </div>
+            </div>
           </div>
-        </div> 
+        </div>
 
         <div className="use-location-container">
-            <div className="use-locaion">
-                <h1>See what is happening near you</h1>            
-            </div>
+          <div className="use-locaion">
+            <h1>See what is happening near you</h1>
+          </div>
 
-            <div className="use-location-input">
-                <input type="text" placeholder="Enter address"/>
-            </div>
+          <div className="use-location-input">
+            <input type="text" placeholder="Enter address" />
+          </div>
 
-            <div className="use-location-footer">
-                <p>Use your location</p>
-            </div>
+          <div className="use-location-footer">
+            <p>Use your location</p>
+          </div>
         </div>
-      </div>  
+      </div>
 
       <div className="footer-container">
-            <div className="footer-heading">
-                <div className="contact-us">
-                    <h3>Contact Us</h3>
-                </div>
+        <div className="footer-heading">
+          <div className="contact-us">
+            <h3>Contact Us</h3>
+          </div>
 
-                <div className="info-services">
-                    <h3>Information and Services</h3>
-                </div>
+          <div className="info-services">
+            <h3>Information and Services</h3>
+          </div>
 
-                <div className="partners">
-                    <h3>Partners</h3>
-                </div>
+          <div className="partners">
+            <h3>Partners</h3>
+          </div>
+        </div>
+
+        <div className="footer-content">
+          <div className="first-part">
+            <div className="find-police">
+              <p>Find a police station</p>
             </div>
 
-            <div className="footer-content">
-                <div className="first-part">
-                    <div className="find-police">
-                      <p>Find a police station</p>
-                    </div>
+            <div className="about-met">
+              <p>About the Met</p>
+            </div>
 
-                    <div className="about-met">
-                        <p>About the Met</p>
-                    </div>
+            <div className="news">
+              <p>News</p>
+            </div>
 
-                    <div className="news">
-                      <p>News</p>
-                    </div>
+            <div className="privacy">
+              <p>Privacy notice</p>
+            </div>
 
-                  <div className="privacy">
-                    <p>Privacy notice</p>
-                  </div>
+            <div className="cookies">
+              <p>Cookies</p>
+            </div>
 
-                <div className="cookies">
-                  <p>Cookies</p>
-                </div>
+            <div className="tcon">
+              <p>Terms and conditions</p>
+            </div>
 
-                <div className="tcon">
-                  <p>Terms and conditions</p>
-                </div>
+            <div className="access">
+              <Link to="/adminlogin" style={{ color: "white" }}>
+                <p>Admin</p>{" "}
+              </Link>
+            </div>
+          </div>
 
-                <div className="access">
-                 <Link to="/adminlogin"style={{ color: "white" }} ><p>Admin</p> </Link>  
-                </div>
-                </div>    
-                
           <div className="second-part">
             <div className="adv-info">
               <p>Advice and information</p>
@@ -120,13 +121,12 @@ const LandingPage = () => {
             <div className="report-footer">
               <p>Report</p>
             </div>
-
-          </div>   
+          </div>
 
           <div className="third-part">
-              <div className="lagos">
-                  <p>Lagos State government</p>            
-              </div>
+            <div className="lagos">
+              <p>Lagos State government</p>
+            </div>
 
             <div className="npf">
               <p>Nigeria Police force</p>
@@ -144,17 +144,13 @@ const LandingPage = () => {
               <p>Fire Service</p>
             </div>
           </div>
-            </div>
+        </div>
 
-            <div className="copyright">
-              <p>Copyright 2020. All rights reserved.</p>
-            </div>
+        <div className="copyright">
+          <p>Copyright 2020. All rights reserved.</p>
+        </div>
       </div>
-
-      </div>
-
-   
-    
+    </div>
   );
 };
 export default LandingPage;
