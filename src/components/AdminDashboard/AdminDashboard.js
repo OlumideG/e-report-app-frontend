@@ -175,7 +175,7 @@ function AdminDashboard({ setAdminAuth, index, info }) {
       setTimeout(() => {
         window.location.reload();
         console.log("Im reloading now")
-        history.push("/")
+        history.push("/adminlogin")
       }, 4000);
     } catch (err) {
       console.error(err.message);
