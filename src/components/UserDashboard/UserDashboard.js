@@ -126,7 +126,12 @@ function UserDashboard({ setAuth }) {
             setAuth(false);
             toast.success("Logout successfully");
 
-            window.location.reload();
+            // window.location.reload();
+
+            setTimeout(() => {
+                window.location.reload();
+                console.log("Im reloading now")
+              }, 9000);
         } catch (err) {
             console.error(err.message);
         }

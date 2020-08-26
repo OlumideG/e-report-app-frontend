@@ -169,8 +169,13 @@ function AdminDashboard({ setAdminAuth, index, info }) {
     try {
       localStorage.removeItem("token");
       setAdminAuth(false);
-      window.location.reload();
+      // window.location.reload();
       toast.success("Logout successfully");
+
+      setTimeout(() => {
+        window.location.reload();
+        console.log("Im reloading now")
+      }, 9000);
     } catch (err) {
       console.error(err.message);
     }
@@ -230,7 +235,7 @@ function AdminDashboard({ setAdminAuth, index, info }) {
       method: 'DELETE',
       mode: 'cors',
     })
-    window.location.reload();
+    // window.location.reload();
     toast.success(`Report ${reportNumber} Deleted`)
 
   }
@@ -244,7 +249,7 @@ function AdminDashboard({ setAdminAuth, index, info }) {
       method: 'PATCH',
       mode: 'cors',
     })
-    window.location.reload();
+    // window.location.reload();
     toast.success(`Report ${reportNumber} Forwaded`)
   }
 
