@@ -260,7 +260,7 @@ function AdminDashboard({ setAdminAuth, index, info }) {
       method: 'PATCH',
       mode: 'cors',
     })
-    window.location.reload();
+    // window.location.reload();
     toast.success(`Report ${reportNumber} Forwaded`)
   }
 
