@@ -2,8 +2,16 @@ import React, { useState, useEffect } from 'react';
 import logo from '../../../src/Logo.svg';
 import { toast } from "react-toastify";
 import { useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { FcSupport } from "react-icons/fc";
+import {MdSettings} from "react-icons/md";
+import {IoMdLogOut} from "react-icons/io";
+import * as MdIcons from "react-icons/md";
+import {FaHome} from "react-icons/fa";  
 import Chart from '../Chart/Chart';
 import "../UserDashboard/UserDashboard.css";
+import AdminNav from './AdminNav';
+import  './Admin.css'
 import '../../App.css'
 
 
@@ -64,42 +72,38 @@ const Accordion = ({ title, children }) => {
 
 
 const AdminReportCards = ({ info, index, deleteReport, forwardReport }) =>
-  <div className="todo">
-    <div className="wrapper" style={{ borderRadius: "10px", marginTop: "20px" }}>
+  <div className="todoAdmin">
+    <div className="wrapperAdmin">
 
       {/* <div className="card-body"> */}
-      <div className={"card-body"}>
-        <h5 className="card-title font-weight-bold text-uppercase form-font">{info.category} at {info.address}</h5>
-        <h5 className="card-title font-weight-bold text-uppercase form-font"> {info.localgovernment}</h5>
-        <h5 className="card-title font-weight-bold text-uppercase form-font"> {info.status}</h5>
-
-        <button className="editbutton" style={{ fontSize: "14px", position: "relative", bottom: "60px", left: "690px" }}>{info.time}</button>
-        <button className="delbutton" style={{ fontSize: "14px", position: "relative", bottom: "60px", left: "720px" }} onClick={() => forwardReport(index, info)}> <i className="fa fa-mail-forward fa-2x"></i></button>
-        <button className="delbutton" style={{ fontSize: "14px", position: "relative", bottom: "60px", left: "740px" }} onClick={() => deleteReport(index, info)}> <i className="fa fa-trash fa-2x"></i></button>
+      <div className={"card-body-admin"}>
+        <div className="card-title-body">
+        <h5 className="card-title">{info.category} at {info.address}</h5>
+        <h5 className="card-title"> {info.localgovernment}</h5>
+        <h5 className="card-title"> {info.status}</h5>
+          </div>
+           
         <div>
 
-          <Accordion title="View details">
-            <div className="myview" style={{ backgroundColor: "whitesmoke", padding: "10px", borderTop: "4px solid rgba(0, 0, 0, 0.25)" }}>
+          <Accordion className="title-admin" title="More">
+            <div className="myview-admin" style={{ backgroundColor: "whitesmoke", padding: "10px", borderTop: "4px solid rgba(0, 0, 0, 0.25)" }}>
               <div>
 
                 <a target="_blank" rel="noopener noreferrer" href={info.imageurl}>
                   <img className="card-img" src={info.imageurl} alt="" style={{ width: "200px", height: "150px" }} />
                 </a>
 
-
-
-                <img className="card-img" src={info.imageurl} alt="" style={{ width: "300px", height: "200px" }} />
               </div>
               <div className="accordion-details">
-                <h5 className="card-title font-weight-bold text-uppercase form-font">Report Id: {info.id}</h5>
-                <h5 className="card-title font-weight-bold text-uppercase form-font">User ID: {info.user_id}</h5>
-                <h5 className="card-title font-weight-bold text-uppercase form-font">Private Report: {info.privatereport.toString()}</h5>
-                <h5 className="card-title font-weight-bold text-uppercase form-font">Report Status: {info.status}</h5>
-                <h5 className="card-title font-weight-bold text-uppercase form-font">Report Date: {info.date}</h5>
-                <h5 className="card-title font-weight-bold text-uppercase form-font"> Report Time: {info.time}</h5>
-                <h5 className="card-title font-weight-bold text-uppercase form-font">Report Local Government: {info.localgovernment}</h5>
+                <h5 className="card-title">Report Id: {info.id}</h5>
+                <h5 className="card-title">User ID: {info.user_id}</h5>
+                <h5 className="card-title">Private Report: {info.privatereport.toString()}</h5>
+                <h5 className="card-title">Report Status: {info.status}</h5>
+                <h5 className="card-title">Report Date: {info.date}</h5>
+                <h5 className="card-title"> Report Time: {info.time}</h5>
+                <h5 className="card-title">Report Local Government: {info.localgovernment}</h5>
                 <div className="word-break">
-                  <h5 className="card-title font-weight-bold text-uppercase form-font"> Report Details: {info.details}</h5>
+                  <h5 className="card-title"> Report Details: {info.details}</h5>
                 </div>
 
 
@@ -107,8 +111,20 @@ const AdminReportCards = ({ info, index, deleteReport, forwardReport }) =>
             </div>
           </Accordion>
         </div>
+
+        {/*
+        <div className="">
+        <button className="editbutton" style={{}}>{info.time}</button>
+        </div>
+        */}
+
+        <div className="delbutton-body">
+        <button className="delbutton-1" onClick={() => forwardReport(index, info)}> <i className="fa fa-mail-forward fa-2x"></i></button>
+        <button className="delbutton-2" style={{ fontSize: "14px", position: "relative", bottom: "60px", left: "740px" }} onClick={() => deleteReport(index, info)}> <i className="fa fa-trash fa-2x"></i></button>
+
       </div>
     </div>
+  </div>
   </div>
 
 

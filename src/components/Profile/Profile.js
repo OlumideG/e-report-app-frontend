@@ -3,13 +3,15 @@ import logo from '../../../src/Logo.svg';
 import { useHistory, Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import { FaHome } from "react-icons/fa";
-import { GrSupport } from "react-icons/gr";
+import { FcSupport } from "react-icons/fc";
 import { RiProfileLine } from 'react-icons/ri';
 import { MdSettings } from "react-icons/md";
 import { IoMdLogOut } from 'react-icons/io';
+import Nav from "../UserDashboard/Nav";
 import decode from 'jwt-decode';
 import '../../App.css';
 import '../UserDashboard/UserDashboard.css';
+import "./profiledashboard.css";
 
 
 
@@ -88,17 +90,10 @@ const Profile = ({ setAuth }) => {
 
 
     return (
-        <div className="supportdashboard">
-            <nav
-                className="navbar navbar-light"
-                style={{ backgroundColor: "#27496D" }}
-            >
-                <img src={logo} alt="Logo" onClick={landingPage} />
-                <div style={{ display: "flex" }}>
-                    {/* <i className="fa fa-user fa-3x" style={{ marginLeft: "10px" }}></i> */}
-                </div>
-
-            </nav>
+        <div className="profiledashboard">
+            <header>
+                <Nav />
+            </header>
 
 
             <div className="dashboard-container">
@@ -106,17 +101,19 @@ const Profile = ({ setAuth }) => {
                     <div className="sidebar">
                         <ul className="sidebar-list">
                             <div className="home-container">
-                                <Link to="/userdashboard"> <button className="home-text">
+                                <Link to="/userdashboard">
+                                 <button className="home-text">
                                     <FaHome className="home-icon" />
-                                    <span className="home-te">Home</span></button>
+                                    <span className="home-te">Home</span>
+                                    </button>
                                 </Link>
                             </div>
 
-                            <div className="support-container">
+                            <div className="profile-container">
                                 <Link to="/profile">
-                                    <button className="support-text">
-                                        <RiProfileLine className="support-icon" />
-                                        <span className="support-te"> Profile </span>
+                                    <button className="profile-text">
+                                        <RiProfileLine className="profile-icon" />
+                                        <span className="profile-te"> Profile </span>
                                     </button>
                                 </Link>
                             </div>
@@ -133,7 +130,7 @@ const Profile = ({ setAuth }) => {
                             <div className="setting-container">
                                 <Link to="/settings">
                                     <button className="setting-text">
-                                        <GrSupport className="setting-icon" />
+                                        <FcSupport className="setting-icon" />
                                         <span className="setting-te">settings</span>
                                     </button>
                                 </Link>

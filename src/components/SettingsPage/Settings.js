@@ -3,11 +3,13 @@ import logo from '../../../src/Logo.svg';
 import { useHistory, Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import { FaHome } from "react-icons/fa";
-import { GrSupport } from "react-icons/gr";
+import { FcSupport } from "react-icons/fc";
 import { RiProfileLine } from 'react-icons/ri';
 import { MdSettings } from "react-icons/md";
 import { IoMdLogOut } from 'react-icons/io';
+import Nav from '../UserDashboard/Nav'
 import '../../App.css';
+import "./settingsdashboard.css";
 
 const Settings = () => {
 
@@ -38,16 +40,9 @@ const Settings = () => {
 
   return (
     <div className="settingdashboard">
-      <nav
-        className="navbar navbar-light"
-        style={{ backgroundColor: "#27496D" }}
-      >
-        <img src={logo} alt="Logo" onClick={landingPage} />
-        <div style={{ display: "flex" }}>
-          {/* <i className="fa fa-user fa-3x" style={{ marginLeft: "10px" }}></i> */}
-
-        </div>
-      </nav>
+        <header>
+            <Nav />
+        </header>
 
       <div className="dashboard-container">
         <div className="dashboard-handler">
@@ -80,7 +75,7 @@ const Settings = () => {
 
               <div className="setting-container">
                 <button className="setting-text">
-                  <GrSupport className="setting-icon" />
+                  <FcSupport className="setting-icon" />
                   <span className="setting-te">settings</span>
                 </button>
               </div>

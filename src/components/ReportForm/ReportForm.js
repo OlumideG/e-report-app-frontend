@@ -117,7 +117,7 @@ function ReportForm({ addReport }) {
 
     return (
         <div>
-            <div className=""><button onClick={() => setButton(true)} className="modal-button"><i className=" space-icon fa fa-plus"></i>Add new report</button></div>
+            <div className="btn-addreport"><button onClick={() => setButton(true)} className="modal-button"><i className=" space-icon fa fa-plus"></i>Add new report</button></div>
             <form className=" form-font form-inline" action="">
                 <Modal show={button} onHide={() => setButton(false)}>
                     <Modal.Header closeButton >New Report</Modal.Header>
