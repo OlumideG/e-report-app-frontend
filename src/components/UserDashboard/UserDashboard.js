@@ -258,7 +258,7 @@ function UserDashboard({ setAuth }) {
                 <img src={logo} alt="Logo" onClick={landingPage} />
                 <div style={{ display: "flex" }}>
                     <button onClick={bellNotification}>
-                    <i className="fa fa-bell fa-3x" style={{ marginLeft: "10px" }}></i>
+                    <i className="fa fa-bell" style={{ color:"white",marginLeft: "10px" }}></i>
                     </button>
                     
                     {/* <button onClick={(e) => logout(e)} className="btn btn-danger">
