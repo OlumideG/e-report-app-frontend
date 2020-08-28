@@ -151,12 +151,12 @@
 
 .card-body {
     background: rgba(196, 196, 196, 0.35);
-    border-left: 10px solid green;
+    border-left: 10px solid #4CAF50;
     border-radius: 10px;
 }
 
 .card-yellow{
-    border-left: 10px solid yellow;  
+    border-left: 10px solid #FFC107;  
 }
 
 
