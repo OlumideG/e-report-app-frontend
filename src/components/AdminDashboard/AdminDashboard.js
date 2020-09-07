@@ -3,6 +3,7 @@ import logo from '../../../src/Logo.svg';
 import { toast } from "react-toastify";
 import { useHistory } from 'react-router-dom';
 import Chart from '../Chart/Chart';
+import DashboardDisplay from './DashboardDisplay';
 import "../UserDashboard/UserDashboard.css";
 import '../../App.css'
 
@@ -438,8 +439,12 @@ function AdminDashboard({ setAdminAuth, index, info }) {
           <Chart />
         </div>
       </div>
+      
 
-
+      <div>
+        <DashboardDisplay />
+      </div>
+      
 
 
 

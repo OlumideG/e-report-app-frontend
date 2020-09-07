@@ -129,7 +129,7 @@ function UserDashboard({ setAuth }) {
             // window.location.reload();
 
             setTimeout(() => {
-                window.location.reload();
+                window.location = "/";
                 console.log("Im reloading now")
               }, 9000);
         } catch (err) {
