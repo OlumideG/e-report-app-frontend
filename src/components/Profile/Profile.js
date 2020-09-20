@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import logo from '../../../src/Logo.svg';
-import { useHistory, Link } from "react-router-dom";
+import { useHistory, NavLink } from "react-router-dom";
 import { toast } from "react-toastify";
 import { FaHome } from "react-icons/fa";
 import { FcSupport } from "react-icons/fc";
@@ -101,39 +101,58 @@ const Profile = ({ setAuth }) => {
                     <div className="sidebar">
                         <ul className="sidebar-list">
                             <div className="home-container">
-                                <Link to="/userdashboard">
+                                <NavLink 
+                                    to="/userdashboard"
+                                    activeClassName="active"
+                                    >
                                  <button className="home-text">
-                                    <FaHome className="home-icon" />
+                                        <div>
+                                            <i class="fa fa-home fa-3x home-fa "></i>
+                                        </div>  
                                     <span className="home-te">Home</span>
                                     </button>
-                                </Link>
+                                </NavLink>
                             </div>
 
                             <div className="profile-container">
-                                <Link to="/profile">
+                                <NavLink to="/profile"
+                                    activeClassName="active"
+                                >
                                     <button className="profile-text">
-                                        <RiProfileLine className="profile-icon" />
+                                        <div>
+                                            <i class="fa fa-users fa-3x profile-fa"></i>
+                                        </div>
                                         <span className="profile-te"> Profile </span>
                                     </button>
-                                </Link>
+                                </NavLink>
                             </div>
 
                             <div className="support-container">
-                                <Link to="/support">
+                                <NavLink 
+                                    to="/support"
+                                    activeClassName="active"
+                                    >
                                     <button className="support-text">
-                                        <MdSettings className="support-icon" />
+                                       <div>
+                                            <i class="fa fa-question-circle fa-3x support-fa"></i>
+                                        </div>
                                         <span className="support-te"> support</span>
                                     </button>
-                                </Link>
+                                </NavLink>
                             </div>
 
                             <div className="setting-container">
-                                <Link to="/settings">
+                                <NavLink 
+                                    to="/settings"
+                                    activeClassName="active"
+                                    >
                                     <button className="setting-text">
-                                        <FcSupport className="setting-icon" />
+                                        <div>
+                                            <i class="fa fa-cog fa-3x setting-fa"></i>
+                                        </div>
                                         <span className="setting-te">settings</span>
                                     </button>
-                                </Link>
+                                </NavLink>
                             </div>
 
                             <div className="logout-container">

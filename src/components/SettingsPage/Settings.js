@@ -1,11 +1,7 @@
 import React from 'react';
 import logo from '../../../src/Logo.svg';
-import { useHistory, Link } from "react-router-dom";
+import { useHistory, NavLink } from "react-router-dom";
 import { toast } from "react-toastify";
-import { FaHome } from "react-icons/fa";
-import { FcSupport } from "react-icons/fc";
-import { RiProfileLine } from 'react-icons/ri';
-import { MdSettings } from "react-icons/md";
 import { IoMdLogOut } from 'react-icons/io';
 import Nav from '../UserDashboard/Nav'
 import '../../App.css';
@@ -49,41 +45,64 @@ const Settings = () => {
           <div className="sidebar">
             <ul className="sidebar-list">
               <div className="home-container">
-                <Link to="/userdashboard"> <button className="home-text">
-                  <FaHome className="home-icon" />
-                  <span className="home-te">Home </span></button>
-                </Link>
+                <NavLink 
+                  to="/userdashboard"
+                  activeClassName="active"
+                  >
+                <button className="home-text">
+                    <div>
+                      <i class="fa fa-home fa-3x home-fa "></i>
+                    </div> 
+                  <span className="home-te">Home </span>
+                </button>
+                </NavLink>
               </div>
 
-              <div className="support-container">
-                <Link to="/profile">
-                  <button className="support-text">
-                    <RiProfileLine className="support-icon" />
+              <div className="profile-container">
+                <NavLink 
+                  to="/profile"
+                  activeClassName="active"
+                  >
+                  <button className="profile-text">
+                    <div>
+                      <i class="fa fa-users fa-3x profile-fa"></i>
+                    </div>
                     <span className="support-te"> Profile </span>
                   </button>
-                </Link>
+                </NavLink>
               </div>
 
               <div className="support-container">
-                <Link to="/support">
+                <NavLink 
+                    to="/support"
+                    activeClassName="active"
+                    >
                   <button className="support-text">
-                    <MdSettings className="support-icon" />
+                     <div>
+                                            <i class="fa fa-question-circle fa-3x support-fa"></i>
+                                        </div>
                     <span className="support-te"> support</span>
                   </button>
-                </Link>
+                </NavLink>
               </div>
 
               <div className="setting-container">
+                <NavLink 
+                  to="/settings"
+                  activeClassName="active">
                 <button className="setting-text">
-                  <FcSupport className="setting-icon" />
+                    <div>
+                      <i class="fa fa-cog fa-3x setting-fa"></i>
+                    </div>
                   <span className="setting-te">settings</span>
                 </button>
+                </NavLink>
               </div>
 
               <div className="logout-container">
                 <button className="logout-text" onClick={e => logout(e)}>
                   <IoMdLogOut className="logout-icon" />
-                  <Link to="/"><span className="logout-te"> Log out</span></Link>
+                <span className="logout-te"> Log out</span>
                 </button>
 
               </div>

@@ -77,7 +77,8 @@ const UserReportCards = ({ info, index, deleteReport, pendingColor }) => (
           </Accordion>
         </div>
 
-        <div>{info.time}</div>
+        <div className="time-delete">
+        <div className="time-container">{info.time}</div>
 
         <div className="delete-container">
           <button
@@ -87,6 +88,7 @@ const UserReportCards = ({ info, index, deleteReport, pendingColor }) => (
             {" "}
             <i className="fa fa-trash fa-1.5x"></i>
           </button>
+        </div>
         </div>
       </div>
     </div>

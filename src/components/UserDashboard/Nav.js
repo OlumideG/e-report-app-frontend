@@ -46,7 +46,7 @@ const Nav = () => {
 
         <div style={{}}>
           <button onClick={bellNotification}>
-            <i className="fa fa-bell fa-3x" style={{ marginLeft: "10px" }}></i>
+            <i className="fa fa-bell fa-3x bell-icon"></i>
           </button>
 
           {/* <button onClick={(e) => logout(e)} className="btn btn-danger">

@@ -10,6 +10,7 @@ import NoMatchPage from "./components/404Page/NoMatchPage";
 import Support from "./components/Support/Support";
 import Settings from "./components/SettingsPage/Settings";
 import Profile from "./components/Profile/Profile";
+import DashboardDisplay from "./components/AdminDashboard/DashboardDisplay";
 import ProtectedRoute from "./components/ProtectedRoute/ProtectedRoute";
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -84,6 +85,8 @@ function App() {
         <ProtectedRoute path="/support" component={Support} />
         <ProtectedRoute path="/settings" component={Settings} />
         <ProtectedRoute path="/profile" component={Profile} />
+        <ProtectedRoute path="/adminHome" component={AdminDashboard} />
+        <ProtectedRoute path="/dashboardDisplay" component={DashboardDisplay} />
         <Route
           exact
           path="/userlogin"

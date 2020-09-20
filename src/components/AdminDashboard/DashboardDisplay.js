@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import Chart from "../Chart/Chart";
 import AdminNav from "./AdminNav";
 import { toast } from "react-toastify";
@@ -17,6 +17,44 @@ import "../../components/UserDashboard/UserDashboard.css";
 // MdDashboard
 
 const DashboardDisplay = ({ setAdminAuth }) => {
+  const [forwardedReports, setForwardedReports] = useState([]);
+  const [pendingReports, setPendingReports] = useState([]);
+
+  const allForwardedReports = () => {
+
+    fetch(`https://ancient-citadel-22859.herokuapp.com/dashboard/admin/home/forwarded`)
+      .then(res => res.json())
+      .then(result => {
+        setForwardedReports(result.length)
+
+        // console.log(result)
+      })
+      .catch(err => {
+        console.log(err.message);
+
+      })
+  }
+
+  allForwardedReports()
+
+  const allpendingReports = () => {
+
+    fetch(`https://ancient-citadel-22859.herokuapp.com/dashboard/admin/home/pending`)
+      .then(res => res.json())
+      .then(result => {
+        setPendingReports(result.length)
+
+        // console.log(result)
+      })
+      .catch(err => {
+        console.log(err.message);
+
+      })
+  }
+
+  allpendingReports()
+
+
   const logout = async (e) => {
     e.preventDefault();
     try {
@@ -87,13 +125,13 @@ const DashboardDisplay = ({ setAdminAuth }) => {
       <div className="dashboard-content">
             <div className="chartCards">
               <div className="chartPending">
-                <h1>124</h1>
+                <h1>{pendingReports}</h1>
 
                 <p>Pending</p>
               </div>
 
               <div className="chartForwarded">
-                <h1>200</h1>
+                <h1>{forwardedReports}</h1>
 
                 <p> Forwarded</p>
               </div>

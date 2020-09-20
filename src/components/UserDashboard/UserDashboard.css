@@ -13,13 +13,13 @@
 .modal-button {
   width: 273px;
   height: 41px;
-  background-color: #c4c4c4;
+  background-color: #fff;
   border: 0.5px solid #0a3c5f;
   border-radius: 0.4rem;
 }
 
 .user-dashboard {
-  background-color: #E5E5E5;
+  background-color: #fff;
   width: 100%;
   height: 180%;
 }
@@ -52,7 +52,6 @@
   padding: 0 50px 0 50px;
   border: none;
 }
-
 
 .todo-list {
   display: block;
@@ -126,6 +125,7 @@
 
 .myview {
   display: block;
+  width: 100%;
   background-color: whitesmoke;
   padding: 10px;
   border-top: 4px solid rgba(0, 0, 0, 0.25);
@@ -147,6 +147,8 @@
   display: block;
   width: 30%;
 }
+
+.accordion-body {}
 
 .card-body .card-title {
   font-size: 15px;
@@ -171,13 +173,20 @@
   width: 40%;
 }
 
+.bell-icon {
+  margin: 10px 1rem 0 0;
+  color: #fff;
+  font-size: 2rem;
+}
+
 .dashboard-content {
-  width: 80%;
-  margin: 0 0 0 0;
+  width: 100%;
+  margin: 0 0 0 20rem;
 }
 
 .dashboard-handler {
   display: flex;
+  position: relative;
 }
 
 .dropit {
@@ -185,15 +194,20 @@
 }
 
 .sidebar {
-  top: 0;
-  left: 0;
-  background-color: #e5e5e5;
-  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25);
-  /* overflow-x: hidden; */
+  margin: 0;
+  /* padding: 0; */
   width: 20%;
-  height: 50%;
+  /* position: fixed; */
+  /* z-index: 0; */
+  /* top: 60px;
+  left: 0; */
+  background-color: #fff;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.25);
+  /* overflow-x: auto; */
+  position: fixed;
+  height: 90%;
+
   padding: 0 0 0 9rem;
-  z-index: 1;
 }
 
 #dropdown-basic {
@@ -212,26 +226,13 @@
 .setting-container .setting-text,
 .logout-container .logout-text,
 .profile-container .profile-text {
-  color: #848484;
+  /* color: #848484; */
   outline: none;
   border: none;
 }
 
 .sid {
   margin-top: 40px;
-}
-
-.support-text:hover,
-.support-text:active,
-.home-text:hover,
-.home-text:active,
-.setting-text:hover,
-.setting-text:active,
-.logout-text:hover,
-.logout-text:active,
-.profile-text:hover,
-.profile-text:active {
-  color: #0a3c57;
 }
 
 button .home-te,
@@ -260,6 +261,7 @@ button .support-te {
 
 .support-icon {
   font-size: 40px;
+  /* color: #848484; */
 }
 
 .setting-icon {
@@ -489,6 +491,11 @@ button .support-te {
   width: 30rem;
 }
 
+/*active*/
+.active {
+  color: #0a3c5f;
+}
+
 /* Accordion css */
 
 body {
@@ -575,17 +582,26 @@ body {
   /* padding: 1em 1.5em; */
 }
 
+.time-delete {
+  display: flex;
+  width: 30%;
+  margin: 0 0 0 -5rem;
+}
+
 .editbutton {
   padding: 0 4rem 0 0;
 }
 
 .edit-container {
   margin: 0 0 0 -18rem;
-
 }
 
 .editbutton:hover {
   color: red;
+}
+
+.time-container {
+  margin: 0 0 0 0;
 }
 
 .delete-container {}
@@ -627,7 +643,7 @@ body {
 }
 
 nav.nav-menu {
-  background-color: #e5e5e5;
+  background-color: #fff;
   width: 250px;
   height: 100vh;
   display: flex;
@@ -698,12 +714,16 @@ li span {
 
 /*Profile-userdashboard*/
 
-
-
 /*Media Query*/
 @media only screen and (min-width: 699px) {
   .menu-bars {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 1378px) and (min-width: 1299px) {
+  .dashboard-content {
+    margin: 0 0 0 15rem;
   }
 }
 
@@ -716,11 +736,51 @@ li span {
   .this {
     margin: 2.5em 12em 0 0;
   }
+
+  .date {
+    margin-left: 145px;
+  }
+
+  .dashboard-content {
+    margin: 0 0 0 13rem;
+  }
+
+  .search-form {
+    margin: 2rem 0 0 7rem;
+  }
+
+  .searchInput {
+    width: 100%;
+  }
+
+  .wrapper {
+    width: 70%;
+  }
+
+  .card-body-title {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 1214px) and (min-width: 1070px) {
   .sidebar {
     padding: 0 0 0 6rem;
+  }
+
+  .date {
+    margin-left: 140px;
+  }
+
+  .dashboard-content {
+    margin: 0 0 0 13rem;
+  }
+
+  .search-form {
+    margin: 2rem 0 0 7rem;
+  }
+
+  .searchInput {
+    width: 100%;
   }
 
   .part-1 {
@@ -740,7 +800,7 @@ li span {
   }
 
   .this {
-    margin: 2.5em 12em 0 0;
+    margin: 2.5em 10em 0 0;
   }
 }
 
@@ -754,23 +814,55 @@ li span {
   }
 
   .btn-addreport {
-    margin: 0 0 0 7rem;
+    margin: 17rem 0 0 7rem;
   }
+
+  /* .btn-addreport {
+    margin: 17rem 0 0 13.5rem;
+  } */
 
   .modal-button {
     width: 240px;
   }
 
   .date-text {
-    margin: 0 0 0 -10rem;
+    margin: 0 0 0 -3rem;
     font-size: 12px;
   }
 
-  .search-form {
-    margin: 20px 0 0 5rem;
+  .date {
+    margin-left: 150px;
   }
+
+  .dashboard-content {
+    margin: 0 0 0 10rem;
+  }
+
+  .search-form {
+    margin: 2rem 0 0 7rem;
+  }
+
+  .searchInput {
+    width: 100%;
+  }
+
+  .this {
+    margin: 2.5em 4em 0 0;
+  }
+
+  .time-delete {
+    margin: 0 0 0 -15rem;
+  }
+
+  .myview {
+    width: 80%;
+  }
+
+
+
 }
 
+/*Pending Issues with the dropdown and useless margin*/
 @media only screen and (max-width: 864px) and (min-width: 700px) {
   .side-drawer {
     display: none;
@@ -781,20 +873,65 @@ li span {
   }
 
   .welcome-user {
-    margin: 100px 0 -230px 6.5rem;
+    margin: 100px 0 -230px 13rem;
   }
 
   .btn-addreport {
-    margin: 0 0 0 7rem;
+    margin: 16rem 0 0 13rem;
   }
 
   .modal-button {
-    width: 240px;
+    width: 200px;
+  }
+
+  .dashboard-content {
+    margin: 0 0rem 0 0rem;
+  }
+
+  .search-form {
+    margin: 2rem 0rem 0 0rem;
+  }
+
+  .searchInput {
+    width: 100%;
+  }
+
+  .this {
+    margin: 2.5em 0rem 0 0rem;
+  }
+
+  .date {
+    margin-left: 0px;
   }
 
   .date-text {
-    margin: 0 0 0 -10rem;
+    margin: 0 0 0 0rem;
     font-size: 12px;
+  }
+
+  .time-delete {
+    margin: 0 0 0 -16rem;
+  }
+
+  .part-2 {
+    margin: 70px 0 20px 3rem;
+  }
+
+  .part-3 {
+    margin: 30px 0 0 5rem;
+  }
+
+  .search-input {
+    width: 50%;
+    margin: 0 5rem 0 0;
+  }
+
+  .wrapper {
+    margin: 0 0 0 12rem;
+  }
+
+  .myview {
+    width: 80%;
   }
 
   .search-form {
@@ -806,6 +943,7 @@ li span {
   }
 }
 
+/*Almost done*/
 @media only screen and (max-width: 699px) and (min-width: 528px) {
   .sidebar {
     display: none;
@@ -816,11 +954,15 @@ li span {
   }
 
   .welcome-user {
-    margin: 60px 0 -230px 3rem;
+    margin: 60px 0 -230px 4rem;
   }
 
+  /* .dashboard-content {
+    margin: 0 0 0 0rem;
+  } */
+
   .btn-addreport {
-    margin: 0 0 0 3rem;
+    margin: 17rem 0 0 3rem;
   }
 
   .modal-button {
@@ -835,7 +977,7 @@ li span {
   }
 
   .searchInput {
-    width: 250%;
+    width: 0%;
   }
 
   .part-2 {
@@ -848,15 +990,31 @@ li span {
   }
 
   .wrapper {
-    width: 90%;
+    width: 80%;
   }
 
   .dashboard-content {
-    margin: 0 0 0 5rem;
+    margin: 0 0 0 0rem;
+    width: 100%;
+    /* z-index: 100; */
   }
 
-  .card-body{
+  .card-body {
     display: block;
+  }
+
+  .time-delete {
+    display: block;
+    width: 30%;
+    margin: 0 0 0 0;
+  }
+
+  .part-2 {
+    padding: 0 0 0 0rem;
+  }
+
+  .search-icon {
+    display: none;
   }
 }
 
@@ -874,15 +1032,15 @@ li span {
   }
 
   .welcome-user-text {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .btn-addreport {
-    margin: 0 0 0 1.2rem;
+    margin: 17rem 0 0 1rem;
   }
 
   .modal-button {
-    width: 200px;
+    width: 180px;
     height: 41px;
     border-radius: 0.9rem;
   }
@@ -896,7 +1054,7 @@ li span {
   }
 
   .part-2 {
-    margin-left: 4rem;
+    margin-left: -3rem;
   }
 
   .history-container .history-text {
@@ -913,14 +1071,34 @@ li span {
   }
 
   .wrapper {
-    width: 100%;
+    width: 80%;
   }
 
   .dashboard-content {
-    margin: 0 0 0 2rem;
+    margin: 0 0 0 0;
+  }
+
+  .search-form {
+
+    width: 70%;
+  }
+
+  .search-input {
+    margin: 0rem 0 0 0;
+  }
+
+  .search-icon {
+    display: none;
   }
 
   .card-body {
     display: block;
   }
+
+  .time-delete {
+    display: block;
+    width: 30%;
+    margin: 0 0 0 0;
+  }
+
 }

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 .chat {
   height: 1300px;
@@ -13,7 +13,7 @@
 .chartPending {
   width: 177px;
   height: 110px;
-  background: #FAFAF4;
+  background: #fafaf4;
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.15px);
   border-radius: 8px;
   text-align: center;
@@ -23,19 +23,16 @@
 .chartForwarded {
   width: 177px;
   height: 110px;
-  background: #FAFAF4;
+  background: #fafaf4;
   box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.15px);
   border-radius: 8px;
   text-align: center;
   padding: 15px 0;
 }
 
-
-
 .chart {
   margin: -20rem 0 0 45rem;
 }
-
 
 .todoAdmin {
   width: 70%;
@@ -54,20 +51,44 @@
   border-left: 10px solid green;
   border-radius: 10px;
   padding: 2rem 2rem 2rem 2rem;
-
 }
 
-.card-title-body {}
+.bell-icon {
+  margin: 10px 1rem 0 0;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.admin-btn {
+  margin: 0 1rem 0 0;
+}
+
+.search-input {
+  padding: 1rem 1rem;
+  outline: none;
+  border-radius: 4px;
+}
+
+.search-icon {
+  background-color: #27496d;
+  border-radius: 0px 4px 4px 0px;
+  padding: 1rem 1rem;
+  color: #fff;
+}
+
+.card-body-title {}
 
 .title-admin {
   display: block;
 }
 
-
 .delbutton-body {
   width: 10%;
 }
 
+.delbutton-2 {
+  display: none;
+}
 
 .admin-part-1 {
   display: flex;
@@ -75,16 +96,22 @@
   margin: 5rem 0 -2rem 0;
 }
 
+.admin-part-2 {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5rem 0 5rem 0;
+
+}
 
 .myview-admin {
   display: block;
-  width: 100%;
+  /* width: 100%; */
   background-color: whitesmoke;
   padding: 10px;
   border-top: 4px solid rgba(0, 0, 0, 0.25);
+
   /* margin: 0 0 0 0; */
 }
-
 
 .delbutton-admin {
   display: block;
@@ -93,14 +120,14 @@
 .admin-welcome {
   width: 70%;
   height: 120px;
-  background-color: #27496D;
+  background-color: #27496d;
   border-radius: 8px;
   margin: 5rem auto 0 auto;
 }
 
 .admin-welcome h5,
 .admin-welcome p {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: #fff;
   margin: 0rem 0 0rem 4rem;
   padding: 1rem 0 0 0;
@@ -108,21 +135,38 @@
 
 .admin-welcome h5 {}
 
+@media only screen and (max-width: 1217px) and (min-width: 1040px) {
+
+
+
+  .card-body-title {
+
+    /* margin: 0 5rem 0 0; */
+  }
+
+  .myview-admin {
+
+    margin: 0 -4rem 0 0;
+    padding: 4rem;
+  }
+
+
+}
 
 @media only screen and (max-width: 1041px) and (min-width: 700px) {
 
+
   .todoAdmin {
     width: 90%;
-    margin: 0 auto;
+    /* margin: ; */
   }
 
   .wrapperAdmin {
-    width: 100%;
+    width: 80%;
     border-radius: 10px;
+    margin: 0 0 0 5rem;
     padding: 0 0 30px 0;
   }
-
-
 
   .delbutton-admin {
     margin: 0 0 0 -10rem;
@@ -130,19 +174,41 @@
 
   .myview-admin {
     width: 90%;
-    padding: 10px;
+    margin: 0 -4rem 0 0;
+
   }
+}
+
+@media only screen and (max-width:863px) and (min-width:700px) {
+  
+  
+  .admin-welcome {
+    margin: 5rem 4rem 0 auto;
+  }
+
+  .admin-part-2 {
+    margin: 5rem 0 5rem 9rem;
+  }
+
+  .wrapperAdmin{
+    margin: 0 0 0 11.5rem;
+    width: 75%;
+  }
+
 }
 
 @media only screen and (max-width: 699px) and (min-width: 625px) {
+
+
   .todoAdmin {
     width: 100%;
     margin: 0 0 0 0;
   }
 
   .wrapperAdmin {
-    width: 100%;
+    width: 80%;
     border-radius: 10px;
+    margin: 0 auto 0 auto;
     padding: 0 0 30px 0;
   }
 
@@ -150,7 +216,7 @@
     display: block;
   }
 
-  .card-title-body {
+  .card-body-title {
     margin: 2rem 0 2rem 2rem;
   }
 
@@ -163,22 +229,24 @@
   }
 
   .admin-welcome {
-    width: 100%;
+    width: 80%;
     height: 120px;
     margin: 5rem auto 0 auto;
   }
+
+
 }
 
 @media only screen and (max-width: 624px) and (min-width: 0) {
-
   .todoAdmin {
     width: 100%;
     margin: 0 0 0 0;
   }
 
   .wrapperAdmin {
-    width: 100%;
+    width: 80%;
     border-radius: 10px;
+    margin: 0 auto;
     padding: 0 0 30px 0;
   }
 
@@ -199,12 +267,11 @@
   }
 
   .admin-welcome {
-    width: 100%;
+    width: 80%;
     height: 120px;
     margin: 5rem auto 0 auto;
   }
 }
-
 
 /*Display-Dashboard*/
 @media only screen and (max-width: 1587px) and (min-width: 1300px) {

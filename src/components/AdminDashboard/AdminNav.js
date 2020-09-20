@@ -45,7 +45,7 @@ const AdminNav = ({ setAdminAuth }) => {
     <>
       <div className="navigation_toolbar nav-tool">
         <div>
-          <Link to="#" >
+          <Link to="#">
             <FaBars className="menu-bars" onClick={showSidebar} />
           </Link>
         </div>
@@ -57,8 +57,13 @@ const AdminNav = ({ setAdminAuth }) => {
         <div className="spacer" />
 
         <div style={{}}>
+        
+          <button onClick={(e) => logout(e)} className="btn btn-danger admin-btn">
+            Logout
+          </button>
+
           <button onClick={bellNotification}>
-            <i className="fa fa-bell fa-3x" style={{ marginLeft: "10px" }}></i>
+            <i className="fa fa-bell fa-3x bell-icon"></i>
           </button>
 
           {/* <button onClick={(e) => logout(e)} className="btn btn-danger">
@@ -66,7 +71,7 @@ const AdminNav = ({ setAdminAuth }) => {
                 </button> */}
         </div>
       </div>
-
+        {/*      
       <nav className={sidebars ? "nav-menu active" : "nav-menu"}>
         <ul className="nav-menu-items" onClick={showSidebar}>
           <li className="navbar-toggle">
@@ -85,11 +90,10 @@ const AdminNav = ({ setAdminAuth }) => {
             );
           })}
 
-          
-            <button onClick={(e) => logout(e)}>Logout</button>
-          
+          <button onClick={(e) => logout(e)}>Logout</button>
         </ul>
       </nav>
+        */}
     </>
   );
 };
